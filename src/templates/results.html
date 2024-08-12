@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Analyzer Webpage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    
+
+  </head>
+  <body>
+    <!-- Header tag -->
+      <header>
+        <h1 style="font-size: 40px;">YouTube Video Comments Analyzing</h1>
+    </header>
+
+    <div class="main_container " style="display: flex; flex-flow: row;">
+      <div class="main_cont ">
+        <div class="thumbnail">
+          <img src="{{ thumbnail }}" width="480px" height="360" >
+        </div>
+        <div>
+          <div class="video_title">
+            <h1>Youtube video Name :  </h1>
+            <p style="font-size: 23px ; font-style: italic;">{{ video_id }}</p>
+          </div>
+          <div class="channel_name">
+            <h1>Youtube Channel Name : </h1>
+            <p style="font-size:27px ; font-family: Roboto , Arial , sans-serif;">{{ channel_id }} </p>
+          </div>
+          <div class="video_title">
+            <h1>RATING :   </h1>
+            <p style="font-size: 23px ; font-style: italic;">{{ rating }} / 5</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="bargraph">
+        <img src="{{ url_for('static', filename='images/1.png') }}" >
+    </div>
+    <div class="bargraph">
+        <img src="{{ url_for('static', filename='images/3.png') }}" >
+    </div>
+    <div class="model_main_cont">
+      <div class="model_cont">
+        <h1>Naive Bayes Model </h1>
+        <h1 class="font-size:23px;">Accuaracy : {{ NBscore }}%</h1>
+      </div>
+      <div class="model_cont">
+        <h1>Support Vector Machine :  </h1>
+        <h1 class="font-size:23px;">Accuaracy : {{ SVMscore }}%</h1>
+      </div>
+      <div class="model_cont">
+        <h1>Decision Tree :  </h1>
+        <h1 class="font-size:23px;">Accuaracy : {{ DTscore }}%</h1>
+      </div>
+    </div>
+
+
+</body>
+</html>

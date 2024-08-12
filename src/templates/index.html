@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Analyzer Webpage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+  </head>
+  <body>
+      <header>
+        <h1>YouTube Video Comments Analyzing</h1>
+    </header>
+
+
+    <div class="main_cont">
+      <h1 style="" ="font-family: Monaco ,Monospace;">Comments Analyzer</h1>
+      <div class="link">
+        <form method="POST" action="http://127.0.0.1:1234/results" >
+          <label for="video_id">Video Link   :  <input type="text" name="video_id" placeholder="YouTube Video Link"></label><br>
+          <input class="button" type="submit" name="Submit" value="Submit">
+        </from>
+      </div>
+    </div>
+
+
+
+</body>
+</html>
